@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get Your Station — Broadcasting, By the People</title>
+<meta name="description" content="Every community has a story. Get Your Station helps churches, schools, and community organizations launch their own TV broadcast station on the Agora Broadcasting Network.">
+<link rel="canonical" href="https://www.getyourstation.com/">
+<link rel="icon" href="favicon.png" type="image/png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Get Your Station">
+<meta property="og:title" content="Get Your Station — Broadcasting, By the People">
+<meta property="og:description" content="Every community has a story. Now it can have a station. Powered by the Agora Broadcasting Network.">
+<meta property="og:image" content="https://www.getyourstation.com/agora_globe.png">
+<meta property="og:url" content="https://www.getyourstation.com/">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Get Your Station — Broadcasting, By the People">
+<meta name="twitter:description" content="Every community has a story. Now it can have a station. Powered by the Agora Broadcasting Network.">
+<meta name="twitter:image" content="https://www.getyourstation.com/agora_globe.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy: #0F1829;
+    --navy-2: #16233F;
+    --bronze: #C4782A;
+    --bronze-light: #E0A25C;
+    --cream: #F5F1E6;
+    --white: #FFFFFF;
+    --line: rgba(245,241,230,0.14);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--navy);
+    color:var(--cream);
+    font-family:'Inter',sans-serif;
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.eyebrow{font-family:'Cinzel',serif;}
+  a{color:inherit;}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 32px;}
+
+  /* NAV */
+  nav{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    background:rgba(15,24,41,0.85);backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;}
+  .brand{font-family:'Cinzel',serif;font-weight:600;font-size:1.1rem;letter-spacing:0.04em;}
+  .brand span{color:var(--bronze-light);}
+  .nav-links{display:flex;gap:36px;font-size:0.9rem;letter-spacing:0.02em;}
+  .nav-links a{text-decoration:none;opacity:0.75;transition:opacity .2s;}
+  .nav-links a:hover{opacity:1;}
+  .nav-cta{
+    background:var(--bronze);color:var(--navy);padding:10px 22px;border-radius:2px;
+    font-weight:600;font-size:0.85rem;text-decoration:none;letter-spacing:0.02em;
+    transition:background .2s;
+  }
+  .nav-cta:hover{background:var(--bronze-light);}
+  @media (max-width:760px){.nav-links{display:none;}}
+
+  /* HERO */
+  .hero{
+    min-height:100vh;display:flex;align-items:center;position:relative;
+    padding-top:76px;overflow:hidden;
+  }
+  .hero-video{
+    position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;
+  }
+  .hero-overlay{
+    position:absolute;inset:0;z-index:1;
+    background:
+      linear-gradient(100deg, rgba(15,24,41,0.94) 0%, rgba(15,24,41,0.72) 40%, rgba(15,24,41,0.4) 68%, rgba(15,24,41,0.65) 100%),
+      linear-gradient(0deg, var(--navy) 0%, transparent 18%);
+  }
+  .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1fr;width:100%;}
+  .eyebrow{
+    color:var(--bronze-light);font-size:0.78rem;letter-spacing:0.22em;text-transform:uppercase;
+    margin-bottom:22px;font-weight:600;
+  }
+  .hero h1{
+    font-size:clamp(2.4rem,5vw,3.6rem);font-weight:700;line-height:1.12;
+    color:var(--white);margin-bottom:22px;
+  }
+  .hero h1 em{color:var(--bronze-light);font-style:normal;}
+  .hero p.sub{
+    font-size:1.15rem;color:rgba(245,241,230,0.82);max-width:480px;margin-bottom:36px;
+    font-weight:400;
+  }
+  .cta-row{display:flex;gap:16px;flex-wrap:wrap;}
+  .btn-primary{
+    background:var(--bronze);color:var(--navy);padding:16px 32px;border-radius:2px;
+    font-weight:700;text-decoration:none;font-size:0.95rem;letter-spacing:0.02em;
+    transition:background .2s, transform .2s;display:inline-block;
+  }
+  .btn-primary:hover{background:var(--bronze-light);transform:translateY(-1px);}
+  .btn-secondary{
+    border:1px solid var(--line);color:var(--cream);padding:16px 32px;border-radius:2px;
+    text-decoration:none;font-size:0.95rem;font-weight:500;transition:border-color .2s;display:inline-block;
+  }
+  .btn-secondary:hover{border-color:var(--bronze-light);}
+
+  /* SECTIONS */
+  section{padding:120px 0;}
+  .section-head{max-width:640px;margin-bottom:64px;}
+  .section-head .eyebrow{margin-bottom:16px;}
+  .section-head h2{font-size:clamp(1.8rem,3.4vw,2.4rem);color:var(--white);font-weight:600;line-height:1.25;}
+  .section-head p{color:rgba(245,241,230,0.7);margin-top:16px;font-size:1.05rem;}
+
+  .intro{background:var(--navy-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .intro-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;}
+  @media (max-width:800px){.intro-grid{grid-template-columns:1fr;}}
+  .intro-card{border-left:2px solid var(--bronze);padding-left:22px;}
+  .intro-card h3{font-size:1.1rem;color:var(--white);margin-bottom:10px;font-weight:600;}
+  .intro-card p{color:rgba(245,241,230,0.68);font-size:0.95rem;}
+
+  /* STEPS - genuine sequence, numbering earned */
+  .steps{counter-reset:step;}
+  .step{
+    display:grid;grid-template-columns:80px 1fr;gap:28px;padding:36px 0;
+    border-top:1px solid var(--line);
+  }
+  .step:last-child{border-bottom:1px solid var(--line);}
+  .step-num{
+    counter-increment:step;font-family:'Cinzel',serif;font-size:2.2rem;color:var(--bronze);
+    font-weight:600;opacity:0.85;
+  }
+  .step-num::before{content: counter(step, decimal-leading-zero);}
+  .step h3{color:var(--white);font-size:1.25rem;margin-bottom:8px;font-weight:600;}
+  .step p{color:rgba(245,241,230,0.68);max-width:560px;}
+
+  /* WHO IT'S FOR */
+  .who{background:var(--navy-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);}
+  @media (max-width:800px){.who-grid{grid-template-columns:1fr;}}
+  .who-card{background:var(--navy-2);padding:44px 36px;}
+  .who-card h3{color:var(--bronze-light);font-size:1.1rem;margin-bottom:12px;font-weight:600;}
+  .who-card p{color:rgba(245,241,230,0.68);font-size:0.95rem;}
+
+  /* CTA BAND */
+  .cta-band{
+    background:linear-gradient(120deg, var(--navy) 0%, #1C2C4D 100%);
+    text-align:center;padding:110px 0;
+  }
+  .cta-band h2{font-size:clamp(1.8rem,3.6vw,2.6rem);color:var(--white);font-weight:600;margin-bottom:18px;}
+  .cta-band p{color:rgba(245,241,230,0.72);max-width:520px;margin:0 auto 40px;}
+
+  footer{border-top:1px solid var(--line);padding:48px 0;}
+  .footer-grid{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;}
+  .footer-grid p{color:rgba(245,241,230,0.5);font-size:0.85rem;}
+  .footer-grid a{text-decoration:none;color:var(--bronze-light);font-size:0.85rem;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="brand">GET YOUR <span>STATION</span></div>
+    <div class="nav-links">
+      <a href="#how">How it works</a>
+      <a href="#who">Who it's for</a>
+      <a href="#start">Start</a>
+    </div>
+    <a href="#start" class="nav-cta">Start Your Station</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <video class="hero-video" autoplay muted loop playsinline poster="agora_globe.png">
+    <source src="https://storage.googleapis.com/xsenassets/Agora%20globe.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Powered by the Agora Broadcasting Network</div>
+      <h1>Broadcasting,<br><em>By the People.</em></h1>
+      <p class="sub">The future of broadcasting is open to everyone. If your community has a story, it deserves a real television station carrying it — not just another streaming account.</p>
+      <div class="cta-row">
+        <a href="#start" class="btn-primary">Start Your Station</a>
+        <a href="https://agorabroadcasting.com" class="btn-secondary">See Agora in Action</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">What This Is</div>
+      <h2>Agora exists to help any community stand up its own TV broadcasting station.</h2>
+    </div>
+    <div class="intro-grid">
+      <div class="intro-card">
+        <h3>Not a streaming app</h3>
+        <p>A real broadcast network on TV — living rooms, smart TVs, and the places your community already watches.</p>
+      </div>
+      <div class="intro-card">
+        <h3>Your own station</h3>
+        <p>A dedicated channel carrying your name, your programming, and your voice — not a folder in someone else's app.</p>
+      </div>
+      <div class="intro-card">
+        <h3>Built to your reach</h3>
+        <p>One network behind it all, so a single church, school, or civic group can broadcast at a scale that used to require a license and a tower.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">How It Works</div>
+      <h2>From idea to on-air, in three moves.</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num"></div>
+        <div>
+          <h3>Tell us about your community</h3>
+          <p>Church, school, sports program, or civic group — tell us who you serve and what you want your station to carry.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num"></div>
+        <div>
+          <h3>We build your station</h3>
+          <p>Your channel is set up on the Agora Broadcasting Network — branded, scheduled, and ready for your content.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num"></div>
+        <div>
+          <h3>You go live</h3>
+          <p>Your station broadcasts to smart TVs everywhere Agora reaches, with your community driving what airs.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="who" id="who">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Who It's For</div>
+      <h2>Every community has a story. Now it can have a station.</h2>
+    </div>
+  </div>
+  <div class="who-grid">
+    <div class="who-card">
+      <h3>Faith Communities</h3>
+      <p>Carry services, teaching, and ministry programming to your congregation and beyond, on a channel that's truly yours.</p>
+    </div>
+    <div class="who-card">
+      <h3>Schools & Athletics</h3>
+      <p>Broadcast games, ceremonies, and school life to the families and fans who can't always be in the stands.</p>
+    </div>
+    <div class="who-card">
+      <h3>Community Organizations</h3>
+      <p>Give local news, events, and civic life a permanent home — not a feed that disappears in an algorithm.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band" id="start">
+  <div class="wrap">
+    <h2>Ready to get your station?</h2>
+    <p>Tell us who you are and what you want to broadcast. We'll follow up to map out your station.</p>
+    <a href="mailto:kevin@getyourstation.com" class="btn-primary">Start the Conversation</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-grid">
+    <p>&copy; 2026 Get Your Station · Part of the Agora Broadcasting Network · A Peak Platforms Production</p>
+    <a href="https://agorabroadcasting.com">agorabroadcasting.com &rarr;</a>
+  </div>
+</footer>
+
+</body>
+</html>
