@@ -158,6 +158,13 @@
   .ota-card p{color:rgba(245,241,230,0.68);font-size:0.95rem;}
   .ota-card .btn-secondary{margin-top:24px;}
 
+  /* TOOLS */
+  .tools{background:var(--navy-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .tools .ota-card{background:var(--navy-2);}
+  .card-link{display:inline-block;margin-top:20px;color:var(--bronze-light);text-decoration:none;font-size:0.9rem;font-weight:500;border-bottom:1px solid rgba(224,162,92,0.4);}
+  .card-link:hover{border-bottom-color:var(--bronze-light);}
+  .footer-links{display:flex;gap:24px;flex-wrap:wrap;}
+
   /* CTA BAND */
   .cta-band{
     background:linear-gradient(120deg, var(--navy) 0%, #1C2C4D 100%);
@@ -181,6 +188,7 @@
       <a href="#how">How it works</a>
       <a href="#who">Who it's for</a>
       <a href="#broadcast">Over the air</a>
+      <a href="#tools">Tools</a>
       <a href="#start">Start</a>
     </div>
     <a href="#start" class="nav-cta">Get Your Station</a>
@@ -307,6 +315,28 @@
   </div>
 </section>
 
+<section class="tools" id="tools">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">More From Peak Platforms</div>
+      <h2>Tools for running your station.</h2>
+      <p>Agora is part of Peak Platforms. These two products pair well with a station.</p>
+    </div>
+    <div class="ota-grid">
+      <div class="ota-card">
+        <h3>WordPal</h3>
+        <p>Private chat for church study groups and classes, so your small groups stay connected between meetings.</p>
+        <a href="https://wordpal.life/" class="card-link">Visit WordPal &rarr;</a>
+      </div>
+      <div class="ota-card">
+        <h3>Peak Link</h3>
+        <p>Private, encrypted video calls. Bring guests and remote contributors into your programming without a studio.</p>
+        <a href="https://www.getpeaklink.com" class="card-link">Visit Peak Link &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="cta-band" id="start">
   <div class="wrap">
     <h2>Ready to get your station?</h2>
@@ -318,9 +348,14 @@
 <footer>
   <div class="wrap footer-grid">
     <p>&copy; 2026 Get Your Station · Part of the Agora Broadcasting Network · A Peak Platforms Production</p>
-    <a href="https://agorabroadcasting.com">agorabroadcasting.com &rarr;</a>
+    <div class="footer-links">
+      <a href="https://agorabroadcasting.com">agorabroadcasting.com &rarr;</a>
+      <a href="https://wordpal.life/">WordPal</a>
+      <a href="https://www.getpeaklink.com">Peak Link</a>
+    </div>
   </div>
 </footer>
 
 </body>
 </html>
+
