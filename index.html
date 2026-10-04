@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Get Your Station — Broadcasting, By the People</title>
-<meta name="description" content="Every community has a story. Get Your Station helps churches, schools, and community organizations launch their own TV broadcast station on the Agora Broadcasting Network.">
+<meta name="description" content="Every community has a story. Get Your Station helps churches, schools, community organizations, and individuals launch their own TV station on the Agora Broadcasting Network.">
 <link rel="canonical" href="https://www.getyourstation.com/">
 <link rel="icon" href="favicon.png" type="image/png">
 
@@ -145,6 +145,16 @@
   .who-card h3{color:var(--bronze-light);font-size:1.1rem;margin-bottom:12px;font-weight:600;}
   .who-card p{color:rgba(245,241,230,0.68);font-size:0.95rem;}
 
+  .hero-note{margin-top:22px;font-size:0.85rem;color:rgba(245,241,230,0.6);max-width:480px;}
+
+  /* OVER THE AIR */
+  .ota-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);}
+  @media (max-width:800px){.ota-grid{grid-template-columns:1fr;}}
+  .ota-card{background:var(--navy);padding:44px 36px;}
+  .ota-card h3{color:var(--bronze-light);font-size:1.1rem;margin-bottom:12px;font-weight:600;}
+  .ota-card p{color:rgba(245,241,230,0.68);font-size:0.95rem;}
+  .ota-card .btn-secondary{margin-top:24px;}
+
   /* CTA BAND */
   .cta-band{
     background:linear-gradient(120deg, var(--navy) 0%, #1C2C4D 100%);
@@ -167,9 +177,10 @@
     <div class="nav-links">
       <a href="#how">How it works</a>
       <a href="#who">Who it's for</a>
+      <a href="#broadcast">Over the air</a>
       <a href="#start">Start</a>
     </div>
-    <a href="#start" class="nav-cta">Start Your Station</a>
+    <a href="#start" class="nav-cta">Get Your Station</a>
   </div>
 </nav>
 
@@ -181,12 +192,13 @@
   <div class="wrap hero-grid">
     <div>
       <div class="eyebrow">Powered by the Agora Broadcasting Network</div>
-      <h1>Broadcasting,<br><em>By the People.</em></h1>
-      <p class="sub">The future of broadcasting is open to everyone. If your community has a story, it deserves a real television station carrying it — not just another streaming account.</p>
+      <h1>Your community's own<br><em>TV station.</em></h1>
+      <p class="sub">Agora gives churches, schools, and civic groups their own station on smart TVs, streaming sticks, and phones, with no studio or transmitter to build.</p>
       <div class="cta-row">
-        <a href="#start" class="btn-primary">Start Your Station</a>
-        <a href="https://agorabroadcasting.com" class="btn-secondary">See Agora in Action</a>
+        <a href="#start" class="btn-primary">Get Your Station</a>
+        <a href="#how" class="btn-secondary">See How It Works</a>
       </div>
+      <p class="hero-note">Streaming first. Over the air where a licensed LPTV station is available.</p>
     </div>
   </div>
 </section>
@@ -195,20 +207,20 @@
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">What This Is</div>
-      <h2>Agora exists to help any community stand up its own TV broadcasting station.</h2>
+      <h2>Agora helps any community launch its own TV station.</h2>
     </div>
     <div class="intro-grid">
       <div class="intro-card">
-        <h3>Not a streaming app</h3>
-        <p>A real broadcast network on TV — living rooms, smart TVs, and the places your community already watches.</p>
-      </div>
-      <div class="intro-card">
         <h3>Your own station</h3>
-        <p>A dedicated channel carrying your name, your programming, and your voice — not a folder in someone else's app.</p>
+        <p>A dedicated station with your name, your programming, and your voice — not a folder in someone else's app.</p>
       </div>
       <div class="intro-card">
-        <h3>Built to your reach</h3>
-        <p>One network behind it all, so a single church, school, or civic group can broadcast at a scale that used to require a license and a tower.</p>
+        <h3>On the screens your community watches</h3>
+        <p>Smart TVs, streaming sticks, and phones — in living rooms, churches, schools, and senior facilities.</p>
+      </div>
+      <div class="intro-card">
+        <h3>Built to scale</h3>
+        <p>One network behind it all, so a single church, school, or civic group can run a station without building a studio or a transmitter.</p>
       </div>
     </div>
   </div>
@@ -218,7 +230,7 @@
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">How It Works</div>
-      <h2>From idea to on-air, in three moves.</h2>
+      <h2>From idea to live, in three moves.</h2>
     </div>
     <div class="steps">
       <div class="step">
@@ -232,14 +244,14 @@
         <div class="step-num"></div>
         <div>
           <h3>We build your station</h3>
-          <p>Your channel is set up on the Agora Broadcasting Network — branded, scheduled, and ready for your content.</p>
+          <p>Your station is set up on the Agora Broadcasting Network — branded, scheduled, and ready for your content.</p>
         </div>
       </div>
       <div class="step">
         <div class="step-num"></div>
         <div>
           <h3>You go live</h3>
-          <p>Your station broadcasts to smart TVs everywhere Agora reaches, with your community driving what airs.</p>
+          <p>Your station goes live on smart TVs, streaming sticks, and phones, with your community driving what airs.</p>
         </div>
       </div>
     </div>
@@ -256,7 +268,7 @@
   <div class="who-grid">
     <div class="who-card">
       <h3>Faith Communities</h3>
-      <p>Carry services, teaching, and ministry programming to your congregation and beyond, on a channel that's truly yours.</p>
+      <p>Carry services, teaching, and ministry programming to your congregation and beyond, on a station that's truly yours.</p>
     </div>
     <div class="who-card">
       <h3>Schools & Athletics</h3>
@@ -269,10 +281,33 @@
   </div>
 </section>
 
+<section id="broadcast">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Over the Air</div>
+      <h2>Reach beyond the app.</h2>
+      <p>Streaming comes first. Where a licensed low-power TV (LPTV) station is available, your programming can also go out over the air to antennas in your area, alongside the apps and smart TVs.</p>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="ota-grid">
+      <div class="ota-card">
+        <h3>For communities</h3>
+        <p>Over-the-air is an option in markets where Agora works with a licensed LPTV station. Availability depends on the station, its tower, and its coverage. Ask us what's possible near you.</p>
+      </div>
+      <div class="ota-card">
+        <h3>Already have a license?</h3>
+        <p>Plug your station into Agora's tools and programming feed to produce and distribute local content without a big production team.</p>
+        <a href="mailto:kevin@getyourstation.com?subject=LPTV%20station%20operator" class="btn-secondary">Talk to Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="cta-band" id="start">
   <div class="wrap">
     <h2>Ready to get your station?</h2>
-    <p>Tell us who you are and what you want to broadcast. We'll follow up to map out your station.</p>
+    <p>Tell us who you are and what you want to carry. Already hold an LPTV license? We'll talk about that too.</p>
     <a href="mailto:kevin@getyourstation.com" class="btn-primary">Start the Conversation</a>
   </div>
 </section>
@@ -286,3 +321,4 @@
 
 </body>
 </html>
+
