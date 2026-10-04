@@ -158,6 +158,39 @@
   .ota-card p{color:rgba(245,241,230,0.68);font-size:0.95rem;}
   .ota-card .btn-secondary{margin-top:24px;}
 
+  /* DIRECTOR MOCKUP */
+  .dc{--dc-bg:#0A101C;--dc-panel:#121D31;--dc-line:rgba(245,241,230,0.14);--dc-text:#F3F7FF;--dc-muted:#9FB2CE;--dc-accent:#E0A25C;--dc-live:#D8443F;
+    max-width:980px;margin:0 auto;border:1px solid var(--dc-line);border-radius:10px;overflow:hidden;background:var(--dc-bg);color:var(--dc-text);
+    font-family:'Inter',sans-serif;font-weight:400;line-height:1.4;box-shadow:0 24px 60px rgba(0,0,0,0.45);text-align:left;}
+  .dc *{box-sizing:border-box;}
+  .dc-bar{display:flex;align-items:center;gap:12px;padding:10px 14px;background:var(--dc-panel);border-bottom:1px solid var(--dc-line);}
+  .dc-dots{display:flex;gap:6px;}
+  .dc-dots i{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.18);display:block;}
+  .dc-bar-title{font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--dc-muted);}
+  .dc-status{margin-left:auto;font-size:0.7rem;color:var(--dc-muted);display:flex;align-items:center;gap:6px;}
+  .dc-status::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--dc-live);}
+  .dc-body{display:grid;grid-template-columns:260px 1fr;}
+  .dc-side{padding:16px;border-right:1px solid var(--dc-line);display:flex;flex-direction:column;gap:14px;background:var(--dc-panel);}
+  .dc-main{padding:16px;display:flex;flex-direction:column;gap:12px;}
+  .dc-label{font-size:0.66rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--dc-muted);margin-bottom:6px;}
+  .dc-row{display:flex;flex-wrap:wrap;gap:6px;}
+  .dc-btn{font-size:0.7rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:7px 10px;border-radius:4px;border:1px solid var(--dc-line);background:rgba(255,255,255,0.04);color:var(--dc-text);}
+  .dc-btn.stop{border-color:rgba(216,68,63,0.6);color:#F29B97;}
+  .dc-btn.on{background:var(--dc-live);border-color:var(--dc-live);color:#fff;}
+  .dc-btn.sel{border-color:var(--dc-accent);color:var(--dc-accent);}
+  .dc-btn.send{background:var(--dc-accent);border-color:var(--dc-accent);color:#0A101C;}
+  .dc-toggle{font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--dc-muted);display:flex;justify-content:space-between;align-items:center;border:1px solid var(--dc-line);border-radius:4px;padding:7px 10px;}
+  .dc-toggle b{font-weight:600;color:var(--dc-text);}
+  .dc-monitor{position:relative;aspect-ratio:16/9;border-radius:6px;border:1px solid var(--dc-line);background:linear-gradient(135deg,#1B2C4A 0%,#0E1830 55%,#2A2216 100%);overflow:hidden;}
+  .dc-monitor .tag{position:absolute;top:10px;left:10px;font-size:0.66rem;font-weight:700;letter-spacing:0.12em;padding:3px 8px;border-radius:3px;background:var(--dc-live);color:#fff;}
+  .dc-monitor .cam{position:absolute;bottom:10px;left:10px;font-size:0.7rem;color:var(--dc-muted);letter-spacing:0.1em;text-transform:uppercase;}
+  .dc-previews{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;}
+  .dc-prev{position:relative;aspect-ratio:16/9;border-radius:4px;border:1px solid var(--dc-line);background:linear-gradient(135deg,#17243D,#0D1628);}
+  .dc-prev.sel{border-color:var(--dc-live);box-shadow:0 0 0 1px var(--dc-live);}
+  .dc-prev span{position:absolute;bottom:4px;left:6px;font-size:0.6rem;letter-spacing:0.1em;color:var(--dc-muted);text-transform:uppercase;}
+  .dc-caption{text-align:center;margin:18px auto 0;font-size:0.8rem;color:rgba(245,241,230,0.55);max-width:560px;}
+  @media (max-width:760px){.dc-body{grid-template-columns:1fr;}.dc-side{border-right:0;border-bottom:1px solid var(--dc-line);}}
+
   /* TOOLS */
   .tools{background:var(--navy-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
   .tools .ota-card{background:var(--navy-2);}
@@ -269,6 +302,53 @@
   </div>
 </section>
 
+<section class="director" id="director" style="border-top:1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">The Director</div>
+      <h2>Run your station from one console.</h2>
+      <p>Switch cameras, run ad and break slots, and message your operators, all from a web app on any device.</p>
+    </div>
+    <div class="dc" role="img" aria-label="Illustration of the Agora Director console, with a program monitor, four camera previews, and live, ad, and break controls">
+      <div class="dc-bar" aria-hidden="true">
+        <span class="dc-dots"><i></i><i></i><i></i></span>
+        <span class="dc-bar-title">Agora Director Console</span>
+        <span class="dc-status">Live</span>
+      </div>
+      <div class="dc-body" aria-hidden="true">
+        <div class="dc-side">
+          <div><span class="dc-btn stop">Stop Broadcast</span></div>
+          <div>
+            <div class="dc-label">Broadcast</div>
+            <div class="dc-row"><span class="dc-btn on">Live</span><span class="dc-btn">Ad</span><span class="dc-btn">Break</span><span class="dc-btn">Off</span></div>
+          </div>
+          <div>
+            <div class="dc-label">Content</div>
+            <div class="dc-row"><span class="dc-btn">Add</span><span class="dc-btn">Upload</span><span class="dc-btn">End</span><span class="dc-btn">Add Feed</span></div>
+          </div>
+          <div class="dc-toggle">Push to X <b>Off</b></div>
+          <div>
+            <div class="dc-label">Message all operators</div>
+            <div class="dc-row"><span class="dc-btn">Cam 1</span><span class="dc-btn sel">Cam 2</span><span class="dc-btn">Cam 3</span><span class="dc-btn">Cam 4</span></div>
+            <div class="dc-row" style="margin-top:8px;"><span class="dc-btn send">Send</span></div>
+          </div>
+        </div>
+        <div class="dc-main">
+          <div class="dc-label" style="margin-bottom:0;">Program Monitor</div>
+          <div class="dc-monitor"><span class="tag">ON AIR</span><span class="cam">Cam 2</span></div>
+          <div class="dc-previews">
+            <div class="dc-prev"><span>Cam 1</span></div>
+            <div class="dc-prev sel"><span>Cam 2</span></div>
+            <div class="dc-prev"><span>Cam 3</span></div>
+            <div class="dc-prev"><span>Cam 4</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="dc-caption">Illustration of the Director console: switch cameras, run ad and break slots, and push to X from any device.</p>
+  </div>
+</section>
+
 <section class="who" id="who">
   <div class="wrap">
     <div class="section-head">
@@ -358,4 +438,5 @@
 
 </body>
 </html>
+
 
